@@ -11,16 +11,22 @@ const p2 = document.getElementById("pass2");
   
 regi.addEventListener("click",(e)=>{
     e.preventDefault();
-    if(firstn.value==="" ){alert("Enter First Name");}else if(firstn.value!==""){const vfirst =/^[A-Za-z\s]+$/;
-    var check= firstn.value.match(vfirst); if(check==null){alert("Invalid First Name");}}
-    if(lastn.value==="" ){alert("Enter Last Name");}else if(lastn.value!==""){const vlast =/^[A-Za-z\s]+$/;
-    var check=lastn.value.match(vlast); if(check==null){alert("Invalid Last Name");}}
-     if(p1.value===""){alert("Enter Password");}
-    if( p2.value===""){alert("Confirm Password");}
-    if(email.value===""){alert("Enter Email");}else if(email.value!==""){const vemail =/^[\w.-]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/;
-    var check= email.value.match(vemail); if(check==null){alert("Invalid Email");}}
-    if(answ.value===""){alert("Provide a Security Answer");}
+    if(firstn.value==="" ){alert("Enter First Name");}
+    else if(lastn.value==="" ){alert("Enter Last Name");}
+    else  if(p1.value===""){alert("Enter Password");}
+    else if( p2.value===""){alert("Confirm Password");}
+    else if(email.value===""){alert("Enter Email");}
+    else if(answ.value===""){alert("Provide a Security Answer");}
    else{
+    const vfirst =/^[A-Za-z\s]+$/;
+    var check= firstn.value.match(vfirst); if(check==null){alert("Invalid First Name");}
+    else{
+        const vlast =/^[A-Za-z\s]+$/;
+    var check=lastn.value.match(vlast); if(check==null){alert("Invalid Last Name");}
+else{
+   const vemail =/^[\w.-]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/;
+    var check= email.value.match(vemail); if(check==null){alert("Invalid Email");}
+ else{
     const numcheck= /^[6-9]\d{9}$/;
     var num = no.value.match(numcheck);
     // if(!no.value){ alert("Error!! Please Enter Valid Number.");}
@@ -36,4 +42,8 @@ regi.addEventListener("click",(e)=>{
     }
 
    }
+}
+
+}
+}
 });
