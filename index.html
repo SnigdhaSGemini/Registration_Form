@@ -30,6 +30,7 @@
           <div class="col">
             <input
               type="text"
+              name="fname"
               required
               class="form-control"
               pattern="[A-Za-z\s]*$"
@@ -45,6 +46,7 @@
               id="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               placeholder="Your Email*"
+              name="email"
             />
           </div>
         </div>
@@ -56,6 +58,7 @@
               class="form-control"
               id="lname"
               pattern="[A-Za-z]*$"
+              name="lname"
               placeholder="Last Name*"
             />
           </div>
@@ -64,6 +67,7 @@
               type="number"
               pattern="[789][0-9]{9}"
               class="form-control"
+              name="no"
               id="no"
               placeholder="Your Phone*"
             />
@@ -75,12 +79,13 @@
               type="password"
               required
               class="form-control"
+              name="pass1"
               id="pass1"
               placeholder="Password*"
             />
           </div>
           <div class="col">
-            <select id="slct" required class="form-control" title="choose">
+            <select id="slct" name="slct" required class="form-control" title="choose">
               <option class="hidden" selected disabled>
                 Please Select Your Security Question
               </option>
@@ -99,6 +104,7 @@
               required
               class="form-control"
               id="pass2"
+              name="pass2"
               placeholder="Confirm Password*"
             />
           </div>
@@ -107,13 +113,14 @@
               type="text"
               required
               class="form-control"
+              name="ans"
               id="ans"
               placeholder="Enter Your Answer*"
             />
           </div>
         </div>
         <div class="form-check form-check-inline">
-          <input
+          <input checked
             class="form-check-input"
             type="radio"
             name="inlineRadioOptions"
@@ -133,7 +140,7 @@
           <label class="form-check-label" for="inlineRadio2">Female</label>
         </div>
         <br />
-        <button class="rounded-pill btn btn-primary" id="reg">
+        <button class="rounded-pill btn btn-primary" type="submit" id="reg" onclick="validate()">
           <strong> Register</strong>
         </button>
       </form>
