@@ -8,9 +8,20 @@ const p2 = document.getElementById("pass2");
   const sel=document.getElementById("slct");
   const email=document.getElementById("email");
   const answ=document.getElementById("ans");
+  
 regi.addEventListener("click",(e)=>{
     e.preventDefault();
-    const numcheck= /^(\([7-9]{1}\) |[0-9]{9})/;
+    if(firstn.value==="" ){alert("Enter First Name");}else if(firstn.value!==""){const vfirst =/^[A-Za-z\s]+$/;
+    var check= firstn.value.match(vfirst); if(check==null){alert("Invalid First Name");}}
+    if(lastn.value==="" ){alert("Enter Last Name");}else if(lastn.value!==""){const vlast =/^[A-Za-z\s]+$/;
+    var check=lastn.value.match(vlast); if(check==null){alert("Invalid Last Name");}}
+     if(p1.value===""){alert("Enter Password");}
+    if( p2.value===""){alert("Confirm Password");}
+    if(email.value===""){alert("Enter Email");}else if(email.value!==""){const vemail =/^[\w.-]+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/;
+    var check= email.value.match(vemail); if(check==null){alert("Invalid Email");}}
+    if(answ.value===""){alert("Provide a Security Answer");}
+   else{
+    const numcheck= /^[6-9]\d{9}$/;
     var num = no.value.match(numcheck);
     // if(!no.value){ alert("Error!! Please Enter Valid Number.");}
     if (num==null && no.value) {
@@ -24,4 +35,5 @@ regi.addEventListener("click",(e)=>{
         +" ,"+"Email Id : "+email.value+", Answer : "+answ.value);}
     }
 
+   }
 });
