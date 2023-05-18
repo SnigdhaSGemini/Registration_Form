@@ -45,18 +45,26 @@
   @media (max-width: 726px) {
     body {
         flex-direction: column;
+        display: block;
         background-image: linear-gradient(to right, blue, lightblue);
+        text-align: center;
+        align-items: center;
     
       }
       .register-div{
-        width: 75%;
+         width: 75vw;
+         /* display: block; */
         border-radius: 0;
         border-top-left-radius: 0%;
          border-bottom-left-radius: 0%;
-         margin: 5%;
+        margin: 5%;
+        margin-left: 15vw;
+        
+         
       }
       .login-div{
-        width: 50%;
+        margin-left: 25vw;
+        width: 50vw;
       }
       .form-control{
         position: relative;
