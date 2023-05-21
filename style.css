@@ -1,5 +1,6 @@
 * {
     align-items: center;
+    text-align: center;
     margin: 0;
     padding: 0;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -9,14 +10,19 @@
     background-image: linear-gradient(to right, blue, lightblue);
     display: flex;
     flex-wrap: wrap;
+  flex-direction: row;
     justify-content: center;
   }
+
   .register-div,
   .login-div {
     margin: 5%;
   }
   form {
     margin: 5%;
+  }
+  label{
+    float: left;
   }
   div {
     margin: 1%;
@@ -38,4 +44,53 @@
     text-align: center;
     width: 30%;
     margin-right: 0;
+  }
+  .tr-class{
+    background-color: lightblue;
+  }
+  .th-class{
+    background-color: aliceblue;
+  }
+  @media (min-width: 726px) and (min-height: 800px) {
+    body{
+      height: 100vh;
+      /* margin-bottom: 0vh;  */
+      /* height: 100%; */
+    }
+  }
+  @media (max-width: 726px) {
+    body {
+        flex-direction: column;
+        display: block;
+        background-image: linear-gradient(to right, blue, lightblue);
+        text-align: center;
+        align-items: center;
+    
+      }
+      .register-div{
+         width: 75vw;
+         /* display: block; */
+        border-radius: 0;
+        border-top-left-radius: 0%;
+         border-bottom-left-radius: 0%;
+        margin: 5%;
+        margin-left: 15vw;
+        padding-bottom: 15%;
+      }
+      label{
+        margin-right: 10vw;
+      }
+      .login-div{
+        margin-left: 25vw;
+        width: 50vw;
+      }
+      .form-control{
+        position: relative;
+        width:  40vw;
+        margin: 0%;
+      }
+      form{
+        align-items: center;
+        text-align: center;
+      }
   }
