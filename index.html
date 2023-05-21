@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body id="body">
     <div class="login-div">
       <h1><strong>Welcome</strong></h1>
       <h1>To</h1>
@@ -27,23 +27,27 @@
       <h1><strong>Apply as a Employee</strong></h1>
       <form>
         <div class="row">
-          <div class="col">
+          <div class="col form-group">
+            <label for="fname" >First Name</label>
             <input
               type="text"
               name="fname"
               required
+              autocomplete="on"
               class="form-control"
               pattern="[A-Za-z\s]*$"
               placeholder="First Name*"
               id="fname"
             />
           </div>
-          <div class="col">
+          <div class="col form-group">
+            <label for="email" >Email Address</label>
             <input
               type="email"
               required
               class="form-control"
               id="email"
+              autocomplete="on"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               placeholder="Your Email*"
               name="email"
@@ -51,40 +55,47 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col form-group">
+            <label for="lname">Last Name</label>
             <input
               type="text"
               required
               class="form-control"
               id="lname"
+              autocomplete="on"
               pattern="[A-Za-z]*$"
               name="lname"
               placeholder="Last Name*"
             />
           </div>
-          <div class="col">
+          <div class="col form-group">
+            <label for="no">Phone Number</label>
             <input
               type="number"
               pattern="[789][0-9]{9}"
               class="form-control"
               name="no"
+              autocomplete="on"
               id="no"
               placeholder="Your Phone*"
             />
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col form-group">
+            <label for="pass1">Password</label>
             <input
-              type="password"
+              type="text"
               required
               class="form-control"
               name="pass1"
+              autocomplete="on"
               id="pass1"
               placeholder="Password*"
             />
           </div>
           <div class="col">
+            <label for="slct" >Select Question</label>
             <select id="slct" name="slct" required class="form-control" title="choose">
               <option class="hidden" selected disabled>
                 Please Select Your Security Question
@@ -98,22 +109,26 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col form-group">
+            <label for="pass2" class="labels">Confirm Password</label>
             <input
-              type="password"
+              type="text"
               required
               class="form-control"
               id="pass2"
               name="pass2"
+              autocomplete="on"
               placeholder="Confirm Password*"
             />
           </div>
-          <div class="col">
+          <div class="col form-group">
+            <label for="ans">Your Answer</label>
             <input
               type="text"
               required
               class="form-control"
               name="ans"
+              autocomplete="on"
               id="ans"
               placeholder="Enter Your Answer*"
             />
@@ -127,7 +142,7 @@
             id="inlineRadio1"
             value="option1"
           />
-          <label class="form-check-label" for="inlineRadio1">Male</label>
+          <label class="form-check-label" for="inlineRadio1" value="Male" id="gender">Male</label>
         </div>
         <div class="form-check form-check-inline">
           <input
@@ -137,10 +152,10 @@
             id="inlineRadio2"
             value="option2"
           />
-          <label class="form-check-label" for="inlineRadio2">Female</label>
+          <label class="form-check-label" for="inlineRadio2" value="Female">Female</label>
         </div>
         <br />
-        <button class="rounded-pill btn btn-primary" type="submit" id="reg" onclick="validate()">
+        <button class="rounded-pill btn btn-primary" type="submit" id="reg" >
           <strong> Register</strong>
         </button>
       </form>
