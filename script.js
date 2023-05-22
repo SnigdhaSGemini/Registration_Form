@@ -36,6 +36,10 @@ regi.addEventListener("click",(e)=>{
         DisplayError(email,"Enter Email");
     /*alert("Enter Email");*/
 }
+else if(sel.value === "Please Select Your Security Question"){
+    console.log(sel.value);
+    DisplayError(sel,"Please Choose one option");
+}
     else if(answ.value.trim()===""){
         DisplayError(answ,"Provide a Security Question & Answer");
     /*alert("Provide a Security Answer");*/
@@ -83,33 +87,32 @@ else{
     /*alert("Error!! Password Confirmation Mismatched!");*/} 
         else{
 
-            alert("Congratulations! All Your Data is Entered Successfully!!");
+                alert("Congratulations! All Your Data is Entered Successfully!!");
 
-              //Get gender 
-              const gen = getGender();
-
-
-        console.log("First Name : "+firstn.value+", Last Name : "+lastn.value+" ,"+
-        "Password : "+p1.value+" ,"+"Phone No. : "+no.value
-        +" ,"+"Email Id : "+email.value+", Answer : "+answ.value+" , Gender : "+gen);
-
-        const store={
-            fname: firstn.value,
-            lname: lastn.value,
-            pass : p1.value,
-            num : no.value,
-            mail: email.value,
-            gender : gen
-        }
-
-        const localstorage = JSON.stringify(store);
-
-        localStorage.setItem('tabledata',localstorage);
-
-        //Store data in Localstorage & Display using table
-        
-        storeAndGet(gen);
-    
+                //Get gender 
+                const gen = getGender();
+  
+  
+          console.log("First Name : "+firstn.value+", Last Name : "+lastn.value+" ,"+
+          "Password : "+p1.value+" ,"+"Phone No. : "+no.value
+          +" ,"+"Email Id : "+email.value+", Answer : "+answ.value+" , Gender : "+gen);
+  
+          const store={
+              fname: firstn.value,
+              lname: lastn.value,
+              pass : p1.value,
+              num : no.value,
+              mail: email.value,
+              gender : gen
+          }
+  
+          const localstorage = JSON.stringify(store);
+  
+          localStorage.setItem('tabledata',localstorage);
+  
+          //Store data in Localstorage & Display using table
+          
+          storeAndGet(gen);          
 }
 }
 }
@@ -254,6 +257,7 @@ tablediv = document.querySelector(".table-div");
         td.style.border="1px solid black";
         td.style.padding="1%";
         td.style.overflow="auto";
+        td.style.overflowWrap="anywhere";
 
     });
 
