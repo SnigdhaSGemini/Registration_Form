@@ -79,14 +79,16 @@ else{
         "Password : "+p1.value+" ,"+"Phone No. : "+no.value
         +" ,"+"Email Id : "+email.value+", Answer : "+answ.value+" , Gender : "+gen);
           
-          
-        var fname = localStorage.setItem('fname',firstn.value);
-        var lname = localStorage.setItem('lname',lastn.value);
-        var pass = localStorage.setItem('password',p1.value);
-        var num = localStorage.setItem('num',no.value);
-        var mail = localStorage.setItem('mail',email.value);
-        var gender = localStorage.setItem('gender',gen);
-        // var ans = localStorage.setItem('ans',answ.value);
+           const store={
+            fname: firstn.value,
+            lname: lastn.value,
+            pass : p1.value,
+            num : no.value,
+            mail: email.value,
+            gender : gen
+        }
+           
+        const localstorage = JSON.stringify(store);
           
          fname=localStorage.getItem('fname',firstn.value);
          lname=localStorage.getItem('lname',lastn.value);
